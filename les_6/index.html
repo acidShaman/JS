@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+<script>
+    fetch('https://jsonplaceholder.typicode.com/todos')
+        .then(value => value.json())
+        .then(function (todoList) {
+            for ( toDo of todoList) {
+               document.write(`<div>userId= ${toDo.userId}</div> <div>id= ${toDo.id}</div> <div>title= ${toDo.title}</div> <div>completed= ${toDo.completed}</div> <br>`);
+            }
+            // console.log(todoList);
+        });
+</script>
+</body>
+</html>
